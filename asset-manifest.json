@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/locus/static/js/main.aef02bfd.js",
+    "main.js": "/locus/static/js/main.8b1071b5.js",
     "static/media/vitaminDtotal.png": "/locus/static/media/vitaminDtotal.38f78d4e79f1d6c4adfe.png",
     "static/media/backGroundImg.png": "/locus/static/media/backGroundImg.f6fc701127470debeefe.png",
     "static/media/rotating-card-bg-back.jpeg": "/locus/static/media/rotating-card-bg-back.183088de91adb283a9ae.jpeg",
     "static/media/mailLogo.png": "/locus/static/media/mailLogo.6649d78485ec51a4e52a.png",
     "static/media/smallLogo.jpg": "/locus/static/media/smallLogo.e4f1e351bface83e210f.jpg",
     "index.html": "/locus/index.html",
-    "main.aef02bfd.js.map": "/locus/static/js/main.aef02bfd.js.map"
+    "main.8b1071b5.js.map": "/locus/static/js/main.8b1071b5.js.map"
   },
   "entrypoints": [
-    "static/js/main.aef02bfd.js"
+    "static/js/main.8b1071b5.js"
   ]
 }
