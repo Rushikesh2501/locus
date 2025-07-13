@@ -38,10 +38,19 @@ function Presentation() {
           opacity={0.6}
           sx={{ cursor: "pointer", userSelect: "none" }}
         >
-          <Grid sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
-            <img src={smallLogo} alt="Logo" style={{ height: 40 }} />
-            <Grid>
-              <Typography>
+          <Grid
+            container
+            direction={{ xs: "column", sm: "row" }}
+            justifyContent="space-between"
+            alignItems={{ xs: "center", sm: "flex-start" }}
+            spacing={1}
+            sx={{ width: "100%", textAlign: { xs: "center", sm: "left" } }}
+          >
+            <Grid item>
+              <img src={smallLogo} alt="Logo" style={{ height: 40 }} />
+            </Grid>
+            <Grid item>
+              <Typography variant="body2">
                 Contact us :-{" "}
                 <a href="tel:+918888254868" style={{ color: "#654a85" }}>
                   +91 8888254868
@@ -61,10 +70,14 @@ function Presentation() {
         sx={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "top",
+          backgroundPosition: {
+            xs: "center 100px", // Mobile: shift background 10px down
+            sm: "top", // Default: top on tablets and up
+          },
           display: "grid",
           placeItems: "center",
         }}
+        Í
       />
       <Card
         sx={{
