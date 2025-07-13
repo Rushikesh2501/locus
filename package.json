@@ -78,5 +78,10 @@
     "lint-staged": "^16.1.2",
     "prettier": "^2.8.7"
   },
+<<<<<<< HEAD
   "homepage": "https://Rushikesh2501.github.io/locus"
 }
+=======
+  "homepage": "https://rushikesh2501.github.io"
+}
+>>>>>>> d23e7d721664205caa26923cc5a16763203e4e8c
