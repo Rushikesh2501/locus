@@ -56,7 +56,7 @@ function Presentation() {
         </Grid>
       </Grid>
       <MKBox
-        minHeight="60vh"
+        minHeight="48vh"
         width="100%"
         sx={{
           backgroundImage: `url(${bgImage})`,
