@@ -42,7 +42,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./src",
     "prettify": "prettier --write .",
-    "prepare": "husky"
+    "prepare": "husky",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -75,5 +77,6 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^2.8.7"
-  }
+  },
+  "homepage": "https://Rushikesh2501.github.io/locus"
 }
