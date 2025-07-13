@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/locus/static/js/main.b9eaf940.js",
+    "main.js": "/locus/static/js/main.17f95f07.js",
     "static/media/vitaminDtotal.png": "/locus/static/media/vitaminDtotal.38f78d4e79f1d6c4adfe.png",
     "static/media/macbook.png": "/locus/static/media/macbook.e0a8c5d5cc02d71b6d86.png",
     "static/media/bg-coworking.jpeg": "/locus/static/media/bg-coworking.06bccc47fe6ae5366bf8.jpeg",
@@ -14,7 +14,7 @@
     "static/media/bg-about-us.jpg": "/locus/static/media/bg-about-us.cf9a123e2a3d371d53da.jpg",
     "static/media/testimonial-6-2.jpg": "/locus/static/media/testimonial-6-2.21f2048f0b89919090f0.jpg",
     "static/media/testimonial-6-3.jpg": "/locus/static/media/testimonial-6-3.d35bef0d65354442d063.jpg",
-    "static/media/mailLogo.png": "/locus/static/media/mailLogo.6649d78485ec51a4e52a.png",
+    "static/media/mailLogo.png": "/locus/static/media/mailLogo.d8559b602ceea2117461.png",
     "static/media/team-1.jpg": "/locus/static/media/team-1.0fd36e0ee93dcfacdef8.jpg",
     "static/media/bruce-mars.jpg": "/locus/static/media/bruce-mars.8a606c4a6dab54c9ceff.jpg",
     "static/media/team-5.jpg": "/locus/static/media/team-5.d59ab7b9f95f1169cf83.jpg",
@@ -31,9 +31,9 @@
     "static/media/logo-nasa.svg": "/locus/static/media/logo-nasa.c5d11f8820bfde5fd64db0074156e06c.svg",
     "static/media/logo-netflix.svg": "/locus/static/media/logo-netflix.432ed6b5c31b9bcab9a38e32bf46a1e9.svg",
     "index.html": "/locus/index.html",
-    "main.b9eaf940.js.map": "/locus/static/js/main.b9eaf940.js.map"
+    "main.17f95f07.js.map": "/locus/static/js/main.17f95f07.js.map"
   },
   "entrypoints": [
-    "static/js/main.b9eaf940.js"
+    "static/js/main.17f95f07.js"
   ]
 }
