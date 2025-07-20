@@ -16,7 +16,11 @@ function Information() {
             <RotatingCard>
               <RotatingCardFront
                 title="BASIC HEALTH PACKGAE"
-                description="40 test parameters at 799/-"
+                description={
+                  <>
+                    40 test parameters at 799/- <br /> <br /> <br />
+                  </>
+                }
               />
               <RotatingCardBack
                 image={bgBack}
@@ -45,7 +49,11 @@ function Information() {
             <RotatingCard>
               <RotatingCardFront
                 title="COMPLETE HEALTH PACKAGE"
-                description="68 test parameters at 1499/-"
+                description={
+                  <>
+                    68 test parameters at 1499/- <br /> <br /> <br />
+                  </>
+                }
               />
               <RotatingCardBack
                 image={bgBack}
@@ -77,7 +85,11 @@ function Information() {
             <RotatingCard>
               <RotatingCardFront
                 title="PREMIUM HEALTH PACKAGE"
-                description="75 test parameters at 1999/-"
+                description={
+                  <>
+                    75 test parameters at 1999/- <br /> <br /> <br />
+                  </>
+                }
               />
               <RotatingCardBack
                 image={bgBack}

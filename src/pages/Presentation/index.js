@@ -71,7 +71,7 @@ function Presentation() {
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
           backgroundPosition: {
-            xs: "center 100px", // Mobile: shift background 10px down
+            xs: "center 110px", // Mobile: shift background 10px down
             sm: "top", // Default: top on tablets and up
           },
           display: "grid",
