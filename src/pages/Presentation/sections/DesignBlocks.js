@@ -8,10 +8,13 @@ import ExampleCard from "pages/Presentation/components/ExampleCard";
 import data from "pages/Presentation/sections/data/designBlocksData";
 
 function DesignBlocks() {
-  const renderData = data.map(({ title, description, items }) => (
+  const renderData = data.map(({ title, description, items, image }) => (
     <Grid container spacing={3} sx={{ mb: 10 }} key={title}>
       <Grid item xs={12} lg={3}>
         <MKBox position="sticky" top="100px" pb={{ xs: 2, lg: 6 }}>
+          {image && (
+            <MKBox component="img" src={image} alt={title} width="100%" maxWidth="150px" mb={2} />
+          )}
           <MKTypography variant="h3" fontWeight="bold" mb={1}>
             {title}
           </MKTypography>
@@ -22,10 +25,10 @@ function DesignBlocks() {
       </Grid>
       <Grid item xs={12} lg={9}>
         <Grid container spacing={3}>
-          {items.map(({ image, name, count, route, pro }) => (
+          {items.map(({ name, count, route, pro }) => (
             <Grid item xs={12} md={4} sx={{ mb: 2 }} key={name}>
               <Link to={pro ? "/" : route}>
-                <ExampleCard image={image} name={name} count={count} pro={pro} />
+                <ExampleCard name={name} count={count} pro={pro} />
               </Link>
             </Grid>
           ))}

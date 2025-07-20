@@ -9,7 +9,6 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 import Information from "pages/Presentation/sections/Information";
 import DesignBlocks from "pages/Presentation/sections/DesignBlocks";
-import Pages from "pages/Presentation/sections/Pages";
 import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 import footerRoutes from "footer.routes";
 import { Typography } from "@mui/material";
@@ -95,7 +94,6 @@ function Presentation() {
           <BuiltByDevelopers />
         </Container>
         <DesignBlocks />
-        <Pages />
         <Container>
           <Grid container spacing={3}>
             <Grid item xs={12} lg={4}>

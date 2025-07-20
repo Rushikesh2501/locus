@@ -5,9 +5,11 @@ import RotatingCard from "examples/Cards/RotatingCard";
 import RotatingCardFront from "examples/Cards/RotatingCard/RotatingCardFront";
 import RotatingCardBack from "examples/Cards/RotatingCard/RotatingCardBack";
 import bgBack from "assets/images/rotating-card-bg-back.jpeg";
-import Box from "@mui/material/Box";
+import { Box, useMediaQuery, useTheme } from "@mui/material";
 
 function Information() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   return (
     <MKBox component="section" py={6} my={6}>
       <Container>
@@ -98,6 +100,7 @@ function Information() {
                   <Box
                     sx={{
                       display: "flex",
+                      flexDirection: isMobile ? "column" : "row",
                       justifyContent: "space-between",
                       gap: 4,
                       fontSize: "1.25rem",
@@ -106,35 +109,40 @@ function Information() {
                   >
                     <ul
                       style={{
-                        paddingLeft: "20px",
+                        paddingLeft: "15px",
                         margin: 0,
-                        fontSize: "1.25rem",
-                        lineHeight: "2rem",
                         textAlign: "start",
+                        whiteSpace: "nowrap",
                       }}
                     >
-                      <li>Hemogram</li>
-                      <li>Giabetes Profile</li>
+                      <li>Iron Deficiency</li>
                       <li>Renal Profile</li>
                       <li>Thyroid Profile</li>
-                      <li>Vitamin Profile</li>
-                      <li>Cardiac Risk Markers</li>
-                    </ul>
-                    <ul
-                      style={{
-                        paddingLeft: "20px",
-                        margin: 0,
-                        fontSize: "1.25rem",
-                        lineHeight: "2rem",
-                        textAlign: "start",
-                      }}
-                    >
-                      <li>Lipid Profile</li>
-                      <li>Testosterone</li>
+                      <li>Diabetes Profile</li>
                       <li>Liver Function Test</li>
-                      <li>Lipid Profile</li>
-                      <li>Iron Deficiency</li>
+                      <li>Cardiac Risk Markers</li>
+                      {isMobile && (
+                        <>
+                          <li>Testosterone</li>
+                          <li>Hemogram</li>
+                        </>
+                      )}
                     </ul>
+                    {!isMobile && (
+                      <ul
+                        style={{
+                          paddingLeft: "0px",
+                          margin: 0,
+                          textAlign: "start",
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        <li>Lipid Profile</li>
+                        <li>Testosterone</li>
+                        <li>Hemogram</li>
+                        <li>Vitamin Profile</li>
+                      </ul>
+                    )}
                   </Box>
                 }
               />
