@@ -48,7 +48,7 @@ function BuiltByDevelopers() {
           </MKTypography>
           <MKTypography
             component="a"
-            href="https://maps.app.goo.gl/smvt8x7XU17pjBai9?g_st=awb"
+            href="https://www.google.com/maps/dir//bus+stop,+Upper+Market+Rd,+opposite+new+gajanan+book+depot,+Upper+Indira+Nagar,+Bibwewadi,+Pune,+Maharashtra+411037/@18.4611613,73.7851515,28860m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x3bc2ebf90ce1e099:0x31f9bc3bb7d70cb4!2m2!1d73.8675532!2d18.4611791?hl=en-GB&entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D"
             target="_blank"
             rel="noreferrer"
             variant="body5"
