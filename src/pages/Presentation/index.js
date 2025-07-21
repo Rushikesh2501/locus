@@ -1,6 +1,7 @@
 import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
+import { Box } from "@mui/material";
 import smallLogo from "assets/images/smallLogo.jpg";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
@@ -13,6 +14,7 @@ import BuiltByDevelopers from "pages/Presentation/components/BuiltByDevelopers";
 import footerRoutes from "footer.routes";
 import { Typography } from "@mui/material";
 import bgImage from "assets/images/mailLogo.png";
+import GoogleReviewsWidget from "google-reviews-widget";
 
 function Presentation() {
   return (
@@ -94,36 +96,27 @@ function Presentation() {
           <BuiltByDevelopers />
         </Container>
         <DesignBlocks />
+        <GoogleReviewsWidget instanceId="15CiOwXVYS4colwrBmcB" />
         <Container>
           <Grid container spacing={3}>
-            <Grid item xs={12} lg={4}>
+            <Grid item xs={12} lg={6}>
               <FilledInfoCard
                 variant="gradient"
                 color="info"
                 icon="flag"
-                title="Getting Started"
-                description="Check the possible ways of working with our product and the necessary files for building your own project."
-                action={{
-                  type: "external",
-                  route: "https://www.creative-tim.com/learning-lab/react/overview/material-kit/",
-                  label: "Let's start",
-                }}
+                title="Empowering Healthcare with Modern Technology of ALTA HEME 340"
+                description={
+                  <Box>
+                    <Typography>
+                      Combining precision, speed, and intelligent detection. With high-throughput
+                      processing of up to 80 samples per hour and smart multi-parameter analysis,
+                      ensures reliable results every time.
+                    </Typography>
+                  </Box>
+                }
               />
             </Grid>
-            <Grid item xs={12} lg={4}>
-              <FilledInfoCard
-                color="info"
-                icon="precision_manufacturing"
-                title="Plugins"
-                description="Get inspiration and have an overview about the plugins that we used to create the Material Kit."
-                action={{
-                  type: "external",
-                  route: "https://www.creative-tim.com/learning-lab/react/overview/datepicker/",
-                  label: "Read more",
-                }}
-              />
-            </Grid>
-            <Grid item xs={12} lg={4}>
+            <Grid item xs={12} lg={6}>
               <FilledInfoCard
                 color="info"
                 icon="apps"

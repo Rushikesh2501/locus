@@ -1,5 +1,7 @@
 import VitaminDtotal from "../../../../assets/images/vitaminDtotal.png";
-
+import LipidProfile from "../../../../assets/images/lipidProfile.png";
+import KidPro from "../../../../assets/images/kidPro.png";
+import Lft from "../../../../assets/images/lft.png";
 export default [
   {
     title: "VITAMIN",
@@ -71,7 +73,7 @@ export default [
   },
   {
     title: "LIPID PROFILE",
-    image: VitaminDtotal,
+    image: LipidProfile,
     route: "/sections/page-sections/features",
     description: "10 Lipid profile contents",
     items: [
@@ -111,7 +113,7 @@ export default [
   },
   {
     title: "KIDPRO",
-    image: VitaminDtotal,
+    image: KidPro,
     route: "/sections/page-sections/features",
     description: "7 Renal profile contents",
     items: [
@@ -147,7 +149,7 @@ export default [
   },
   {
     title: "LIVER FUNCTION TEST",
-    image: VitaminDtotal,
+    image: Lft,
     route: "/sections/page-sections/features",
     description: "12 Liver  profile contents",
     items: [
