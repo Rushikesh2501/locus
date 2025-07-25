@@ -50,10 +50,6 @@ export default [
         count: 6,
       },
       {
-        name: "Logo Areas",
-        count: 4,
-      },
-      {
         name: "VITAMIN B7/BITIN",
         count: 10,
       },

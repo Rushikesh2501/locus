@@ -1,4 +1,5 @@
 import Container from "@mui/material/Container";
+import React, { useState } from "react";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import { Box } from "@mui/material";
@@ -15,10 +16,29 @@ import footerRoutes from "footer.routes";
 import { Typography } from "@mui/material";
 import bgImage from "assets/images/mailLogo.png";
 import GoogleReviewsWidget from "google-reviews-widget";
+import Fab from "@mui/material/Fab";
+import NavigationIcon from "@mui/icons-material/Navigation";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import TextField from "@mui/material/TextField";
+import List from "@mui/material/List";
+import ListItem from "@mui/material/ListItem";
+import Divider from "@mui/material/Divider";
+import testData from "../Presentation/sections/locus_lab_test_rates";
+import IconButton from "@mui/material/IconButton";
+// import ClearIcon from "@mui/icons-material/Clear";
+import CloseIcon from "@mui/icons-material/Close";
 
 function Presentation() {
+  const [open, setOpen] = React.useState(false);
+  const [searchText, setSearchText] = useState("");
+
+  const filteredData = testData.filter((item) =>
+    item.testName.toLowerCase().includes(searchText.toLowerCase())
+  );
   return (
-    <>
+    <Grid>
       <Grid
         sx={{
           position: "fixed",
@@ -86,7 +106,6 @@ function Presentation() {
           mx: { xs: 2, lg: 3 },
           mt: -8,
           mb: 4,
-          backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
           backdropFilter: "saturate(200%) blur(30px)",
           boxShadow: "0px -4px 10px rgba(0, 0, 0, 0.1), 0px 6px 15px rgba(0, 0, 0, 0.2)",
         }}
@@ -188,7 +207,129 @@ function Presentation() {
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />
       </MKBox>
-    </>
+      <Fab
+        variant="extended"
+        color="info"
+        sx={{
+          position: "fixed",
+          bottom: 24,
+          right: 24,
+          zIndex: 1200,
+          boxShadow: "0px 4px 20px rgba(0,0,0,0.3)",
+          textTransform: "none",
+        }}
+        onClick={() => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          setOpen(true);
+        }}
+      >
+        <NavigationIcon sx={{ mr: 1 }} />
+        See our full catalog
+      </Fab>
+      <Dialog
+        open={open}
+        // onClose={() => setOpen(false)}
+        fullWidth
+        maxWidth="md"
+        PaperProps={{
+          sx: {
+            maxHeight: "90vh",
+            display: "flex",
+            flexDirection: "column",
+          },
+        }}
+      >
+        <DialogTitle sx={{ m: 0, p: 2 }}>
+          Search Lab Tests
+          <IconButton
+            aria-label="close"
+            onClick={() => setOpen(false)}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+              color: (theme) => theme.palette.error.main,
+            }}
+          >
+            <CloseIcon />
+          </IconButton>
+        </DialogTitle>
+        <DialogContent
+          sx={{
+            overflowY: "auto",
+            px: 3,
+            py: 2,
+          }}
+        >
+          <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+            <TextField
+              fullWidth
+              variant="outlined"
+              placeholder="Search test name..."
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+            />
+            {searchText && (
+              <IconButton
+                onClick={() => setSearchText("")}
+                sx={{ ml: 1 }}
+                color="primary"
+                aria-label="Clear search"
+              >
+                <Typography variant="body2">Clear</Typography>
+              </IconButton>
+            )}
+          </Box>
+
+          {/* Header Row */}
+          <Grid container spacing={2} sx={{ fontWeight: "bold", mb: 1 }}>
+            <Grid item xs={5}>
+              Test Name
+            </Grid>
+            <Grid item xs={2}>
+              Sample Type
+            </Grid>
+            <Grid item xs={1}>
+              Vol
+            </Grid>
+            <Grid item xs={2}>
+              Sample Mode
+            </Grid>
+            <Grid item xs={2} sx={{ textAlign: "right" }}>
+              MRP (₹)
+            </Grid>
+          </Grid>
+
+          <Divider sx={{ mb: 1 }} />
+
+          <List>
+            {filteredData.map((item, index) => (
+              <ListItem key={index} disableGutters divider>
+                <Grid container spacing={2} alignItems="center">
+                  <Grid item xs={5}>
+                    <Typography variant="body2">{item.testName}</Typography>
+                  </Grid>
+                  <Grid item xs={2}>
+                    <Typography variant="body2">{item.sampleType}</Typography>
+                  </Grid>
+                  <Grid item xs={1}>
+                    <Typography variant="body2">{item.volume}</Typography>
+                  </Grid>
+                  <Grid item xs={2}>
+                    <Typography variant="body2">{item.sampleMode}</Typography>
+                  </Grid>
+                  <Grid item xs={2} sx={{ textAlign: "right" }}>
+                    <Typography variant="body2" fontWeight="bold">
+                      ₹{item.mrp}
+                    </Typography>
+                  </Grid>
+                </Grid>
+              </ListItem>
+            ))}
+          </List>
+        </DialogContent>
+      </Dialog>
+    </Grid>
   );
 }
 
