@@ -29,11 +29,14 @@ import testData from "../Presentation/sections/locus_lab_test_rates";
 import IconButton from "@mui/material/IconButton";
 // import ClearIcon from "@mui/icons-material/Clear";
 import CloseIcon from "@mui/icons-material/Close";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 function Presentation() {
   const [open, setOpen] = React.useState(false);
   const [searchText, setSearchText] = useState("");
-
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
   const filteredData = testData.filter((item) =>
     item.testName.toLowerCase().includes(searchText.toLowerCase())
   );
@@ -283,16 +286,16 @@ function Presentation() {
 
           {/* Header Row */}
           <Grid container spacing={2} sx={{ fontWeight: "bold", mb: 1 }}>
-            <Grid item xs={5}>
+            <Grid item xs={isMobile ? 10 : 5}>
               Test Name
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={2} sx={{ display: isMobile ? "none" : "block" }}>
               Sample Type
             </Grid>
-            <Grid item xs={1}>
+            <Grid item xs={1} sx={{ display: isMobile ? "none" : "block" }}>
               Vol
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={2} sx={{ display: isMobile ? "none" : "block" }}>
               Sample Mode
             </Grid>
             <Grid item xs={2} sx={{ textAlign: "right" }}>
@@ -306,18 +309,22 @@ function Presentation() {
             {filteredData.map((item, index) => (
               <ListItem key={index} disableGutters divider>
                 <Grid container spacing={2} alignItems="center">
-                  <Grid item xs={5}>
+                  <Grid item xs={isMobile ? 10 : 5}>
                     <Typography variant="body2">{item.testName}</Typography>
                   </Grid>
-                  <Grid item xs={2}>
+
+                  <Grid item xs={2} sx={{ display: isMobile ? "none" : "block" }}>
                     <Typography variant="body2">{item.sampleType}</Typography>
                   </Grid>
-                  <Grid item xs={1}>
+
+                  <Grid item xs={1} sx={{ display: isMobile ? "none" : "block" }}>
                     <Typography variant="body2">{item.volume}</Typography>
                   </Grid>
-                  <Grid item xs={2}>
+
+                  <Grid item xs={2} sx={{ display: isMobile ? "none" : "block" }}>
                     <Typography variant="body2">{item.sampleMode}</Typography>
                   </Grid>
+
                   <Grid item xs={2} sx={{ textAlign: "right" }}>
                     <Typography variant="body2" fontWeight="bold">
                       ₹{item.mrp}
