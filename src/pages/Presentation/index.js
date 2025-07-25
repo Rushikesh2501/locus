@@ -264,7 +264,19 @@ function Presentation() {
             py: 2,
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center", mb: 2 }}>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              mb: 2,
+              position: "sticky",
+              top: 0,
+              backgroundColor: "background.paper",
+              zIndex: 1,
+              pb: 1,
+              pt: 1,
+            }}
+          >
             <TextField
               fullWidth
               variant="outlined"
@@ -285,23 +297,35 @@ function Presentation() {
           </Box>
 
           {/* Header Row */}
-          <Grid container spacing={2} sx={{ fontWeight: "bold", mb: 1 }}>
-            <Grid item xs={isMobile ? 10 : 5}>
-              Test Name
+          <Box
+            sx={{
+              position: "sticky",
+              top: { xs: 55, sm: 60 }, // adjust if needed
+              backgroundColor: "background.paper",
+              zIndex: 1,
+              pb: 1,
+              pt: 1,
+            }}
+          >
+            <Grid container spacing={2} sx={{ fontWeight: "bold", mb: 1 }}>
+              <Grid item xs={isMobile ? 10 : 5}>
+                Test Name
+              </Grid>
+              <Grid item xs={2} sx={{ display: isMobile ? "none" : "block" }}>
+                Sample Type
+              </Grid>
+              <Grid item xs={1} sx={{ display: isMobile ? "none" : "block" }}>
+                Vol
+              </Grid>
+              <Grid item xs={2} sx={{ display: isMobile ? "none" : "block" }}>
+                Sample Mode
+              </Grid>
+              <Grid item xs={2} sx={{ textAlign: "right" }}>
+                MRP (₹)
+              </Grid>
             </Grid>
-            <Grid item xs={2} sx={{ display: isMobile ? "none" : "block" }}>
-              Sample Type
-            </Grid>
-            <Grid item xs={1} sx={{ display: isMobile ? "none" : "block" }}>
-              Vol
-            </Grid>
-            <Grid item xs={2} sx={{ display: isMobile ? "none" : "block" }}>
-              Sample Mode
-            </Grid>
-            <Grid item xs={2} sx={{ textAlign: "right" }}>
-              MRP (₹)
-            </Grid>
-          </Grid>
+            <Divider sx={{ mb: 1 }} />
+          </Box>
 
           <Divider sx={{ mb: 1 }} />
 
