@@ -1,81 +1,48 @@
 // @mui icons
 import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import YouTubeIcon from "@mui/icons-material/YouTube";
-
-// Material Kit 2 React components
+// import TwitterIcon from "@mui/icons-material/Twitter";
+// import GitHubIcon from "@mui/icons-material/GitHub";
+// import YouTubeIcon from "@mui/icons-material/YouTube";
+import InstagramIcon from "@mui/icons-material/Instagram";
 import MKTypography from "components/MKTypography";
+import logoCT from "assets/images/blank.png";
 
-// Images
-import logoCT from "assets/images/logo-ct-dark.png";
-
-const date = new Date().getFullYear();
+// const date = new Date().getFullYear();
 
 export default {
   brand: {
-    name: "Material Kit 2",
+    name: "LOCUS Pathavlogy",
     image: logoCT,
     route: "/",
   },
   socials: [
     {
       icon: <FacebookIcon />,
-      link: "https://www.facebook.com/CreativeTim/",
+      link: "https://m.facebook.com/share/1FQ9nE3u1P/?wtsid=rdr_0x9soqKGh3Q5JTxFi",
     },
     {
-      icon: <TwitterIcon />,
-      link: "https://twitter.com/creativetim",
-    },
-    {
-      icon: <GitHubIcon />,
-      link: "https://github.com/creativetimofficial",
-    },
-    {
-      icon: <YouTubeIcon />,
-      link: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
+      icon: <InstagramIcon />,
+      link: "https://www.instagram.com/locus_511/profilecard/?igsh=MWtnYXFmbzA2NXAzMA==",
     },
   ],
   menus: [
     {
-      name: "company",
-      items: [
-        { name: "about us", href: "https://www.creative-tim.com/presentation" },
-        { name: "freebies", href: "https://www.creative-tim.com/templates/free" },
-        { name: "premium tools", href: "https://www.creative-tim.com/templates/premium" },
-        { name: "blog", href: "https://www.creative-tim.com/blog" },
-      ],
-    },
-    {
-      name: "resources",
-      items: [
-        { name: "illustrations", href: "https://iradesign.io/" },
-        { name: "bits & snippets", href: "https://www.creative-tim.com/bits" },
-        { name: "affiliate program", href: "https://www.creative-tim.com/affiliates/new" },
-      ],
-    },
-    {
       name: "help & support",
       items: [
-        { name: "contact us", href: "https://www.creative-tim.com/contact-us" },
-        { name: "knowledge center", href: "https://www.creative-tim.com/knowledge-center" },
-        { name: "custom development", href: "https://services.creative-tim.com/" },
-        { name: "sponsorships", href: "https://www.creative-tim.com/sponsorships" },
-      ],
-    },
-    {
-      name: "legal",
-      items: [
-        { name: "terms & conditions", href: "https://www.creative-tim.com/terms" },
-        { name: "privacy policy", href: "https://www.creative-tim.com/privacy" },
-        { name: "licenses (EULA)", href: "https://www.creative-tim.com/license" },
+        { name: "contact us", href: "tel:+918888254868" },
+        {
+          name: "Location",
+          href: "https://www.google.com/maps/dir//bus+stop,+Upper+Market+Rd,+opposite+new+gajanan+book+depot,+Upper+Indira+Nagar,+Bibwewadi,+Pune,+Maharashtra+411037/@18.4611613,73.7851515,28860m/data=!3m1!1e3!4m8!4m7!1m0!1m5!1m1!1s0x3bc2ebf90ce1e099:0x31f9bc3bb7d70cb4!2m2!1d73.8675532!2d18.4611791?hl=en-GB&entry=ttu&g_ep=EgoyMDI1MDcxNi4wIKXMDSoASAFQAw%3D%3D",
+        },
+        // { name: "custom development", href: "https://services.creative-tim.com/" },
+        // { name: "sponsorships", href: "https://www.creative-tim.com/sponsorships" },
       ],
     },
   ],
   copyright: (
     <MKTypography variant="button" fontWeight="regular">
-      All rights reserved. Copyright &copy; {date} Material Kit by{" "}
-      <MKTypography
+      {/* All rights reserved. Copyright &copy; {date} Material Kit by{" "} */}
+      {/* <MKTypography
         component="a"
         href="https://www.creative-tim.com"
         target="_blank"
@@ -84,7 +51,7 @@ export default {
         fontWeight="regular"
       >
         Creative Tim
-      </MKTypography>
+      </MKTypography> */}
       .
     </MKTypography>
   ),

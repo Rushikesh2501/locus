@@ -6,7 +6,7 @@ import { Box } from "@mui/material";
 import smallLogo from "assets/images/smallLogo.jpg";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
-import MKSocialButton from "components/MKSocialButton";
+// import MKSocialButton from "components/MKSocialButton";
 import DefaultFooter from "examples/Footers/DefaultFooter";
 import FilledInfoCard from "examples/Cards/InfoCards/FilledInfoCard";
 import Information from "pages/Presentation/sections/Information";
@@ -138,74 +138,19 @@ function Presentation() {
                 }
               />
             </Grid>
-            <Grid item xs={12} lg={6}>
-              <FilledInfoCard
-                color="info"
-                icon="apps"
-                title="Components"
-                description="Material Kit is giving you a lot of pre-made components, that will help you to build UI's faster."
-                action={{
-                  type: "external",
-                  route: "https://www.creative-tim.com/learning-lab/react/alerts/material-kit/",
-                  label: "Read more",
-                }}
-              />
-            </Grid>
-          </Grid>
-        </Container>
-        {/* <Download /> */}
-        <MKBox pt={18} pb={6}>
-          <Container>
             <Grid container spacing={3}>
               <Grid item xs={12} lg={5} ml="auto" sx={{ textAlign: { xs: "center", lg: "left" } }}>
                 <MKTypography variant="h4" fontWeight="bold" mb={0.5}>
                   Thank you for your support!
                 </MKTypography>
                 <MKTypography variant="body1" color="text">
-                  We deliver the best web products
+                  We deliver precision in diagnosis, excellencein care...
                 </MKTypography>
               </Grid>
-              <Grid
-                item
-                xs={12}
-                lg={5}
-                my={{ xs: 5, lg: "auto" }}
-                mr={{ xs: 0, lg: "auto" }}
-                sx={{ textAlign: { xs: "center", lg: "right" } }}
-              >
-                <MKSocialButton
-                  component="a"
-                  href="https://twitter.com/intent/tweet?text=Check%20Material%20Design%20System%20made%20by%20%40CreativeTim%20%23webdesign%20%23designsystem%20%23mui5&amp;url=https%3A%2F%2Fwww.creative-tim.com%2Fproduct%2Fmaterial-kit-react"
-                  target="_blank"
-                  color="twitter"
-                  sx={{ mr: 1 }}
-                >
-                  <i className="fab fa-twitter" />
-                  &nbsp;Tweet
-                </MKSocialButton>
-                <MKSocialButton
-                  component="a"
-                  href="https://www.facebook.com/sharer/sharer.php?u=https://www.creative-tim.com/product/material-kit-react"
-                  target="_blank"
-                  color="facebook"
-                  sx={{ mr: 1 }}
-                >
-                  <i className="fab fa-facebook" />
-                  &nbsp;Share
-                </MKSocialButton>
-                <MKSocialButton
-                  component="a"
-                  href="https://www.pinterest.com/pin/create/button/?url=https://www.creative-tim.com/product/material-kit-react"
-                  target="_blank"
-                  color="pinterest"
-                >
-                  <i className="fab fa-pinterest" />
-                  &nbsp;Pin it
-                </MKSocialButton>
-              </Grid>
             </Grid>
-          </Container>
-        </MKBox>
+          </Grid>
+        </Container>
+        {/* <Download /> */}
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />

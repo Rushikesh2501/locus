@@ -102,10 +102,10 @@ function Footer() {
                 </MKTypography>
               </MKBox>
             </Stack>
-            <MKTypography variant="button" opacity={0.8}>
+            {/* <MKTypography variant="button" opacity={0.8}>
               Copyright © <script>document.write(new Date().getFullYear())</script>2021 Material
               Design by Creative Tim.
-            </MKTypography>
+            </MKTypography> */}
           </Grid>
           <Grid item xs={12} lg={6} ml="auto" textAlign={{ xs: "center", lg: "right" }}>
             <MKTypography variant="body1" fontWeight="bold" mb={6} sx={{ fontSize: "1.125rem" }}>
