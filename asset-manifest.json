@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.js": "/locus/static/js/main.08e6b6dd.js",
+    "main.js": "/locus/static/js/main.fb1a8547.js",
     "static/media/vitaminDtotal.png": "/locus/static/media/vitaminDtotal.0b13b93907a426b19a7a.png",
     "static/media/lipidProfile.png": "/locus/static/media/lipidProfile.bff3bb9c57af96d73d4c.png",
     "static/media/kidPro.png": "/locus/static/media/kidPro.7e1ec9e0c46c03ebcc32.png",
@@ -34,9 +34,9 @@
     "static/media/logo-nasa.svg": "/locus/static/media/logo-nasa.c5d11f8820bfde5fd64db0074156e06c.svg",
     "static/media/logo-netflix.svg": "/locus/static/media/logo-netflix.432ed6b5c31b9bcab9a38e32bf46a1e9.svg",
     "index.html": "/locus/index.html",
-    "main.08e6b6dd.js.map": "/locus/static/js/main.08e6b6dd.js.map"
+    "main.fb1a8547.js.map": "/locus/static/js/main.fb1a8547.js.map"
   },
   "entrypoints": [
-    "static/js/main.08e6b6dd.js"
+    "static/js/main.fb1a8547.js"
   ]
 }
